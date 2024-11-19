@@ -1,0 +1,147 @@
+[
+    {
+      "id": 1,
+      "image": "https://i.ibb.co.com/Pm5k1M8/Aryan.jpg",
+      "serviceName": "Career Counseling Sessions",
+      "category": "Online",
+      "description": "Receive personalized, in-depth guidance to help you discover your ideal career path, set achievable goals, and create a roadmap to success. These sessions are tailored to your strengths, passions, and aspirations, ensuring a fulfilling and sustainable career journey.",
+      "pricing": "$50 per session",
+      "duration": "05-12-24 5-6pm",
+      "counselor": "Aryan Ahad Ateeq",
+      "rating": 4.8,
+      "learnMore": "https://www.coursera.org/articles/career-counseling"
+    },
+    {
+      "id": 2,
+      "image": "https://i.ibb.co.com/4TnqvFQ/moga.jpg",
+      "serviceName": "Resume Review",
+      "category": "Online",
+      "description": "Get a detailed evaluation of your resume, focusing on format, content, and presentation to make it stand out to recruiters. Learn how to highlight your achievements effectively, avoid common pitfalls, and create a resume that impresses potential employers.",
+      "pricing": "$30 per review",
+      "duration": "06-12-24 3-4pm",
+      "counselor": "Uzma Ateeq",
+      "rating": 4.6,
+      "learnMore": "https://resumeworded.com/score"
+    },
+    {
+      "id": 3,
+      "image": "https://i.ibb.co.com/Y0DW4NB/Alavi.png",
+      "serviceName": "Interview Preparation",
+      "category": "Group",
+      "description": "Participate in hands-on mock interview sessions, receive personalized feedback, and master the art of answering tough questions with confidence. These sessions will equip you with techniques to leave a lasting impression on interviewers and secure your dream job.",
+      "pricing": "$40 per session",
+      "duration": "07-12-24 1-2pm",
+      "counselor": "Alavi Ahmed",
+      "rating": 4.7,
+      "learnMore": "https://www.indeed.com/career-advice/interviewing/how-to-prepare-for-an-interview"
+    },
+    {
+      "id": 4,
+      "image": "https://i.ibb.co.com/xD323VF/Akib.jpg",
+      "serviceName": "Job Search Strategies",
+      "category": "Offline",
+      "description": "Discover innovative strategies to effectively search for jobs in today’s competitive market. Learn how to utilize online platforms, networking opportunities, and targeted applications to maximize your chances of landing the right job.",
+      "pricing": "$35 per session",
+      "duration": "08-12-24 10-11am",
+      "counselor": "Akib Tanzim",
+      "rating": 4.5,
+      "learnMore": "https://www.indeed.com/career-advice/finding-a-job/job-searching-strategies"
+    },
+    {
+      "id": 5,
+      "image": "https://i.ibb.co.com/fDd3TfL/Midrar.jpg",
+      "serviceName": "Professional Networking",
+      "category": "Group",
+      "description": "Understand the importance of networking and learn strategies to build meaningful professional connections. This session will guide you through creating an impactful LinkedIn profile, reaching out to industry professionals, and maintaining long-term relationships.",
+      "pricing": "$45 per session",
+      "duration": "09-12-24 6-7pm",
+      "counselor": "Midrar Bin Feroz",
+      "rating": 4.9,
+      "learnMore": "https://www.indeed.com/career-advice/career-development/professional-networking"
+    },
+    {
+      "id": 6,
+      "image": "https://i.ibb.co.com/0cT9C41/Asif.jpg",
+      "serviceName": "Time Management Workshops",
+      "category": "Online",
+      "description": "Learn proven time management techniques to prioritize tasks, avoid procrastination, and increase productivity. This workshop will help you create a balanced schedule, manage stress, and achieve both personal and professional goals efficiently.",
+      "pricing": "$25 per session",
+      "duration": "10-12-24 4-5pm",
+      "counselor": "Mahdi Hasan Noor Asif",
+      "rating": 4.4,
+      "learnMore": "https://www.learningtree.com/courses/time-management-training/"
+    },
+    {
+      "id": 7,
+      "image": "https://i.ibb.co.com/rk1Fzg6/Zaima.jpg",
+      "serviceName": "Skills Assessment",
+      "category": "Offline",
+      "description": "Take a comprehensive assessment to identify your strengths, skill gaps, and potential career opportunities. Receive actionable insights and personalized recommendations to enhance your capabilities and excel in your chosen field.",
+      "pricing": "$50 per session",
+      "duration": "11-12-24 2-3pm",
+      "counselor": "Zaima Ahmed",
+      "rating": 4.8,
+      "learnMore": "https://immi.homeaffairs.gov.au/visas/working-in-australia/skills-assessment"
+    },
+    {
+      "id": 8,
+      "image": "https://i.ibb.co.com/WBL9Xgm/Fahim.jpg",
+      "serviceName": "Confidence Building",
+      "category": "Group",
+      "description": "Join engaging and interactive sessions designed to help you overcome self-doubt and build confidence. Learn practical techniques to handle pressure, communicate assertively, and make a positive impression in any situation.",
+      "pricing": "$30 per session",
+      "duration": "12-12-24 5-6pm",
+      "counselor": "Fahim Shariar",
+      "rating": 4.7,
+      "learnMore": "https://www.skillsyouneed.com/ps/confidence.html#:~:text=Positive%20thinking%2C%20practice%2C%20training%2C,own%20ability%2C%20skills%20and%20experience."
+    },
+    {
+      "id": 9,
+      "image": "https://i.ibb.co.com/RSgwYRQ/Sharina.jpg",
+      "serviceName": "Leadership Skills Training",
+      "category": "Online",
+      "description": "Develop essential leadership skills such as decision-making, team management, and conflict resolution. This training will empower you to inspire and lead others effectively, whether in your workplace or personal projects.",
+      "pricing": "$55 per session",
+      "duration": "13-12-24 3-4pm",
+      "counselor": "Sharina Zahera",
+      "rating": 4.9,
+      "learnMore": "https://www.udemy.com/courses/personal-development/leadership/?srsltid=AfmBOopc0W8zzHvz5PEz0gbH_lUPyvvCmvZMGxDu6DroF5sA9KnCQjbw"
+    },
+    {
+      "id": 10,
+      "image": "https://i.ibb.co.com/vqDjHQh/Suhail.jpg",
+      "serviceName": "Public Speaking Training",
+      "category": "Group",
+      "description": "Enhance your public speaking skills through hands-on practice and expert coaching. Gain the confidence to deliver impactful speeches, connect with your audience, and convey your message effectively in any setting.",
+      "pricing": "$35 per session",
+      "duration": "14-12-24 11am-12pm",
+      "counselor": "Suhail Saiful",
+      "rating": 4.6,
+      "learnMore": "https://www.coursera.org/learn/public-speaking"
+    },
+    {
+      "id": 11,
+      "image": "https://i.ibb.co.com/GW6yTdk/Sameer.jpg",
+      "serviceName": "Work-Life Balance Coaching",
+      "category": "Offline",
+      "description": "Achieve a harmonious balance between your work and personal life through this coaching session. Learn practical tips for setting boundaries, managing time, and nurturing your well-being while staying productive at work.",
+      "pricing": "$45 per session",
+      "duration": "15-12-24 7-8pm",
+      "counselor": "Shariar Sameer",
+      "rating": 4.8,
+      "learnMore": "https://lifeatlascoaching.com/work-life-balance-coaching/"
+    },
+    {
+      "id": 12,
+      "image": "https://i.ibb.co.com/xGM0CHR/Lamim.jpg",
+      "serviceName": "Motivation Boost Sessions",
+      "category": "Online",
+      "description": "Reignite your motivation and rediscover your drive to pursue your goals. These sessions provide strategies to overcome setbacks, build resilience, and maintain a positive outlook on your journey toward success.",
+      "pricing": "$20 per session",
+      "duration": "16-12-24 9-10am",
+      "counselor": "Yeasin Mahamud",
+      "rating": 4.5,
+      "learnMore": "https://www.workhuman.com/blog/motivational-games/"
+    }
+  ]
+  
