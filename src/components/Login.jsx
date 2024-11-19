@@ -1,8 +1,14 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Login = () => {
+
+    useEffect(() => {
+        document.title = "Login | ElevateU";
+    }, []);
 
     const {userLogin, setUser} = useContext(AuthContext);
     const [error, setError] = useState({});
@@ -16,20 +22,27 @@ const Login = () => {
         const email = form.email.value;
         const password = form.password.value;
         console.log({ email, password });
+
         userLogin(email, password)
         .then((result) =>{
             const user = result.user;
             setUser(user);
-            navigate(location?.state ? location.state : "/");
+            toast.success("Login successful!");
+            setTimeout(() =>{
+                navigate(location?.state ? location.state : "/");
+            }, 2000);
         })
         .catch((err) => {
             setError({...error, login: err.code});
+            toast.error("Login failed: " + err.message);
         })
     };
 
 
     return (
+        
         <div className="min-h-screen flex justify-center items-center">
+            <ToastContainer position="top-center" />
 
             <div className="card bg-base-100 w-full max-w-lg shrink-0 p-10">
 

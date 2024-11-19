@@ -9,6 +9,7 @@ import Login from "../components/Login";
 import Register from "../components/Register";
 import PrivateRoute from "./PrivateRoute";
 
+
 const router = createBrowserRouter([
     {
         path: "/",

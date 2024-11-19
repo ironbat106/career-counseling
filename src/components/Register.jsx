@@ -1,10 +1,15 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import TestToast from "./TestToast";
 
 const Register = () => {
+
+    useEffect(() => {
+        document.title = "Register | ElevateU";
+    }, []);
 
     const { createNewUser, setUser, updateUserProfile } = useContext(AuthContext);
     const navigate = useNavigate();
@@ -42,12 +47,12 @@ const Register = () => {
         const password = form.get("password");
 
         if (name.length < 4) {
-            setError({ ...error, name: "Must be more than 5 characters long" });
-            toast.error("Name Must be more than 5 characters long!");
+            setError({ ...error, name: "Must be more than 4 characters long" });
+            toast.error("Name Must be more than 4 characters long!");
             return;
         }
 
-        if (error.password){
+        if (error.password) {
             toast.error("Please fix the password errors before submitting.");
             return;
         }
@@ -60,8 +65,10 @@ const Register = () => {
                 setUser(user);
                 updateUserProfile({ displayName: name, photoURL: photo })
                     .then(() => {
-                        toast.success("Registration successful!");
-                        navigate("/");
+                        toast.success("Registration successful!", { autoClose: 3000 });
+                        setTimeout(() =>{
+                            navigate("/");
+                        }, 2000);
                     })
                     .catch((err) => {
                         toast.error("Error updating profile: " + err.message);
@@ -76,6 +83,8 @@ const Register = () => {
 
     return (
         <div className="min-h-screen flex justify-center items-center">
+            <ToastContainer position="top-center" />
+            {/* <TestToast></TestToast> */}
 
             <div className="card bg-base-100 w-full max-w-lg shrink-0 p-10">
 
@@ -164,7 +173,7 @@ const Register = () => {
                     Already Have An Account ?
 
                     <Link className="text-yellow-200 underline" to="/auth/login">
-                    Login
+                        Login
                     </Link>
                 </p>
 

@@ -1,11 +1,16 @@
 import MainSection from './MainSection';
 import NavBar from './NavBar';
 import Footer from './Footer';
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../provider/AuthProvider';
 import { updateProfile } from 'firebase/auth';
 
 const MyProfile = () => {
+
+    useEffect(() => {
+        document.title = "My Profile | ElevateU";
+    }, []);
+
     const { user, setUser } = useContext(AuthContext);
     const [newDisplayName, setNewDisplayName] = useState('');
     const [newPhotoURL, setNewPhotoURL] = useState('');
