@@ -1,9 +1,10 @@
-import MainSection from './MainSection';
 import NavBar from './NavBar';
 import Footer from './Footer';
 import { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../provider/AuthProvider';
 import { updateProfile } from 'firebase/auth';
+
+import backgroundImage from '../assets/usinglaptop.jpg';
 
 const MyProfile = () => {
 
@@ -34,20 +35,29 @@ const MyProfile = () => {
     };
 
     return (
-        <div>
+        <div className="bg-gradient-to-b from-gray-800 to-gray-900 min-h-screen text-white">
+
             <NavBar></NavBar>
-            <MainSection></MainSection>
-            <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
-                <div className="card bg-white shadow-md p-6 w-full max-w-md">
-                    <h2 className="text-center font-greatvibes text-yellow-400 text-4xl mb-6">
+
+            <div
+                className="flex flex-col items-center justify-center min-h-screen py-12 bg-cover bg-center"
+                style={{ backgroundImage: `url(${backgroundImage})` }}  // Using the imported image
+            ></div>
+
+            <div className="flex flex-col items-center justify-center min-h-screen py-12">
+
+                <div className="group bg-gradient-to-b from-gray-800 to-gray-900 p-8 rounded-lg shadow-lg hover:shadow-2xl hover:scale-105 transform transition-transform duration-300 ease-in-out w-full max-w-md mx-auto">
+
+                    <h2 className="text-center font-greatvibes text-yellow-400 text-5xl mb-6 transform hover:scale-105 transition duration-300">
                         My Profile
                     </h2>
+
                     {user && (
                         <>
                             <img
                                 src={user?.photoURL || "https://via.placeholder.com/150"}
                                 alt={user?.displayName || "User"}
-                                className="w-32 h-32 rounded-full mx-auto mb-4"
+                                className="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-yellow-400 shadow-xl group-hover:scale-105 transform transition-transform duration-300"
                             />
                             <h3 className="text-center text-xl font-semibold">
                                 {user?.displayName || "Anonymous User"}
@@ -57,24 +67,24 @@ const MyProfile = () => {
                             </p>
 
                             {/* Update Profile Form */}
-                            <div className="mt-6">
+                            <div className="mt-6 space-y-4">
                                 <input
                                     type="text"
                                     placeholder="New Display Name"
                                     value={newDisplayName}
                                     onChange={(e) => setNewDisplayName(e.target.value)}
-                                    className="input input-bordered w-full mb-4"
+                                    className="input input-bordered input-yellow-400 w-full text-lg py-3 px-5 rounded-lg shadow-md transition duration-300 hover:border-yellow-500 focus:outline-none focus:ring-2 focus:ring-yellow-500"
                                 />
                                 <input
                                     type="text"
                                     placeholder="New Photo URL"
                                     value={newPhotoURL}
                                     onChange={(e) => setNewPhotoURL(e.target.value)}
-                                    className="input input-bordered w-full mb-4"
+                                    className="input input-bordered input-yellow-400 w-full text-lg py-3 px-5 rounded-lg shadow-md transition duration-300 hover:border-yellow-500 focus:outline-none focus:ring-2 focus:ring-yellow-500"
                                 />
                                 <button
                                     onClick={handleProfileUpdate}
-                                    className="btn btn-warning w-full"
+                                    className="btn btn-warning hover:bg-yellow-300 text-black w-full py-3 px-6 rounded-full font-semibold text-xl transition duration-300 ease-in-out transform hover:scale-105"
                                 >
                                     Update Profile
                                 </button>

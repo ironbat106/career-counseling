@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { FaGoogle } from "react-icons/fa";
 
 const Login = () => {
 
@@ -10,11 +11,12 @@ const Login = () => {
         document.title = "Login | ElevateU";
     }, []);
 
-    const {userLogin, setUser} = useContext(AuthContext);
+    const { userLogin, setUser, googleSignIn } = useContext(AuthContext);
     const [error, setError] = useState({});
     const location = useLocation();
     const navigate = useNavigate();
     console.log(location);
+
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -24,23 +26,38 @@ const Login = () => {
         console.log({ email, password });
 
         userLogin(email, password)
-        .then((result) =>{
-            const user = result.user;
-            setUser(user);
-            toast.success("Login successful!");
-            setTimeout(() =>{
-                navigate(location?.state ? location.state : "/");
-            }, 2000);
-        })
-        .catch((err) => {
-            setError({...error, login: err.code});
-            toast.error("Login failed: " + err.message);
-        })
+            .then((result) => {
+                const user = result.user;
+                setUser(user);
+                toast.success("Login successful!");
+                setTimeout(() => {
+                    navigate(location?.state ? location.state : "/");
+                }, 2000);
+            })
+            .catch((err) => {
+                setError({ ...error, login: err.code });
+                toast.error("Login failed: " + err.message);
+            })
+    };
+
+    const handleGoogleSignIn = () => {
+        googleSignIn()
+            .then((result) => {
+                const user = result.user;
+                setUser(user);
+                toast.success("Google Sign-In successful!");
+                setTimeout(() => {
+                    navigate(location?.state || "/");
+                }, 2000);
+            })
+            .catch((err) => {
+                toast.error("Google Sign-In failed: " + err.message);
+            });
     };
 
 
     return (
-        
+
         <div className="min-h-screen flex justify-center items-center">
             <ToastContainer position="top-center" />
 
@@ -74,14 +91,28 @@ const Login = () => {
                             )
                         }
                         <label className="label">
-                            <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
+                            <a href="#" className="label-text-alt link link-hover underline">Forgot password?</a>
                         </label>
                     </div>
 
                     <div className="form-control mt-6">
-                        <button className="btn btn-warning">Login</button>
+                        <button className="btn btn-warning w-full">Login</button>
                     </div>
+                </form>
 
+                <div className="divider">OR</div>
+
+
+                <form onSubmit={handleSubmit} className="card-body">
+                <div className="form-control">
+                    <button
+                        className="btn btn-outline btn-warning w-full"
+                        onClick={handleGoogleSignIn}
+                    >
+                        Login with Google
+                        <FaGoogle className="mr-2" />
+                    </button>
+                </div>
                 </form>
 
                 <p className="text-center font-semibold">Don't Have An Account ? <Link className="text-yellow-200 underline" to="/auth/register">Register</Link>

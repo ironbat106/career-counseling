@@ -9,7 +9,7 @@
       "duration": "05-12-24 5-6pm",
       "counselor": "Aryan Ahad Ateeq",
       "rating": 4.8,
-      "learnMore": "https://example.com/services/career_counseling"
+      "learnMore": "https://www.coursera.org/articles/career-counseling"
     },
     {
       "id": 2,
@@ -21,7 +21,7 @@
       "duration": "06-12-24 3-4pm",
       "counselor": "Uzma Ateeq",
       "rating": 4.6,
-      "learnMore": "https://example.com/services/resume_review"
+      "learnMore": "https://resumeworded.com/score"
     },
     {
       "id": 3,
@@ -33,7 +33,7 @@
       "duration": "07-12-24 1-2pm",
       "counselor": "Alavi Ahmed",
       "rating": 4.7,
-      "learnMore": "https://example.com/services/interview_prep"
+      "learnMore": "https://www.indeed.com/career-advice/interviewing/how-to-prepare-for-an-interview"
     },
     {
       "id": 4,
@@ -45,7 +45,7 @@
       "duration": "08-12-24 10-11am",
       "counselor": "Akib Tanzim",
       "rating": 4.5,
-      "learnMore": "https://example.com/services/job_search"
+      "learnMore": "https://www.indeed.com/career-advice/finding-a-job/job-searching-strategies"
     },
     {
       "id": 5,
@@ -57,7 +57,7 @@
       "duration": "09-12-24 6-7pm",
       "counselor": "Midrar Bin Feroz",
       "rating": 4.9,
-      "learnMore": "https://example.com/services/networking"
+      "learnMore": "https://www.indeed.com/career-advice/career-development/professional-networking"
     },
     {
       "id": 6,
@@ -69,7 +69,7 @@
       "duration": "10-12-24 4-5pm",
       "counselor": "Mahdi Hasan Noor Asif",
       "rating": 4.4,
-      "learnMore": "https://example.com/services/time_management"
+      "learnMore": "https://www.learningtree.com/courses/time-management-training/"
     },
     {
       "id": 7,
@@ -81,7 +81,7 @@
       "duration": "11-12-24 2-3pm",
       "counselor": "Zaima Ahmed",
       "rating": 4.8,
-      "learnMore": "https://example.com/services/skills_assessment"
+      "learnMore": "https://immi.homeaffairs.gov.au/visas/working-in-australia/skills-assessment"
     },
     {
       "id": 8,
@@ -93,7 +93,7 @@
       "duration": "12-12-24 5-6pm",
       "counselor": "Fahim Shariar",
       "rating": 4.7,
-      "learnMore": "https://example.com/services/confidence_building"
+      "learnMore": "https://www.skillsyouneed.com/ps/confidence.html#:~:text=Positive%20thinking%2C%20practice%2C%20training%2C,own%20ability%2C%20skills%20and%20experience."
     },
     {
       "id": 9,
@@ -105,7 +105,7 @@
       "duration": "13-12-24 3-4pm",
       "counselor": "Sharina Zahera",
       "rating": 4.9,
-      "learnMore": "https://example.com/services/leadership_skills"
+      "learnMore": "https://www.udemy.com/courses/personal-development/leadership/?srsltid=AfmBOopc0W8zzHvz5PEz0gbH_lUPyvvCmvZMGxDu6DroF5sA9KnCQjbw"
     },
     {
       "id": 10,
@@ -117,7 +117,7 @@
       "duration": "14-12-24 11am-12pm",
       "counselor": "Suhail Saiful",
       "rating": 4.6,
-      "learnMore": "https://example.com/services/public_speaking"
+      "learnMore": "https://www.coursera.org/learn/public-speaking"
     },
     {
       "id": 11,
@@ -129,7 +129,7 @@
       "duration": "15-12-24 7-8pm",
       "counselor": "Shariar Sameer",
       "rating": 4.8,
-      "learnMore": "https://example.com/services/work_life_balance"
+      "learnMore": "https://lifeatlascoaching.com/work-life-balance-coaching/"
     },
     {
       "id": 12,
@@ -141,7 +141,7 @@
       "duration": "16-12-24 9-10am",
       "counselor": "Yeasin Mahamud",
       "rating": 4.5,
-      "learnMore": "https://example.com/services/motivation_boost"
+      "learnMore": "https://www.workhuman.com/blog/motivational-games/"
     }
   ]
   

@@ -4,6 +4,8 @@ import { AuthContext } from "../provider/AuthProvider";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import TestToast from "./TestToast";
+import { FaGoogle } from "react-icons/fa";
+
 
 const Register = () => {
 
@@ -11,7 +13,7 @@ const Register = () => {
         document.title = "Register | ElevateU";
     }, []);
 
-    const { createNewUser, setUser, updateUserProfile } = useContext(AuthContext);
+    const { createNewUser, setUser, updateUserProfile, googleSignIn } = useContext(AuthContext);
     const navigate = useNavigate();
     const [error, setError] = useState({});
     const [password, setPassword] = useState("");
@@ -78,6 +80,21 @@ const Register = () => {
             .catch((err) => {
                 toast.error("Registration failed: " + err.message);
                 console.log(err);
+            });
+    };
+
+    const handleGoogleSignIn = () => {
+        googleSignIn()
+            .then((result) => {
+                const user = result.user;
+                setUser(user);
+                toast.success("Google Sign-In successful!");
+                setTimeout(() => {
+                    navigate(location?.state || "/");
+                }, 2000);
+            })
+            .catch((err) => {
+                toast.error("Google Sign-In failed: " + err.message);
             });
     };
 
@@ -154,10 +171,6 @@ const Register = () => {
                                 </div>
                             )}
 
-                        <label className="label">
-                            <a href="#" className="label-text-alt link link-hover underline">Forgot password?</a>
-                        </label>
-
                     </div>
 
                     <div className="form-control mt-6">
@@ -165,16 +178,24 @@ const Register = () => {
                             Register
                         </button>
                     </div>
-
                 </form>
 
-                <p className="text-center font-semibold">
+                <div className="divider">OR</div>
 
-                    Already Have An Account ?
 
-                    <Link className="text-yellow-200 underline" to="/auth/login">
-                        Login
-                    </Link>
+                <form onSubmit={handleSubmit} className="card-body">
+                <div className="form-control">
+                    <button
+                        className="btn btn-outline btn-warning w-full"
+                        onClick={handleGoogleSignIn}
+                    >
+                        Login with Google
+                        <FaGoogle className="mr-2" />
+                    </button>
+                </div>
+                </form>
+
+                <p className="text-center font-semibold">Already Have An Account ? <Link className="text-yellow-200 underline" to="/auth/login">Login</Link>
                 </p>
 
             </div>

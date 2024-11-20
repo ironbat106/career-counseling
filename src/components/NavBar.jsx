@@ -11,12 +11,12 @@ const NavBar = () => {
 
 
     return (
-        <div className="navbar bg-gradient-to-r from-gray-800 via-gray-900 to-black text-white shadow-lg sm:px-6 md:px-8">
+        <div className="navbar sticky top-0 bg-gradient-to-r from-gray-800 via-gray-900 to-black text-white shadow-lg z-50 sm:px-6 md:px-8">
 
             <div className="flex-1">
-                <a className="btn btn-ghost normal-case text-4xl font-bold tracking-wider text-yellow-400 hover:text-yellow-200 font-greatvibes">
+                <Link to="/" className="btn btn-ghost normal-case text-4xl font-bold tracking-wider text-yellow-400 hover:text-yellow-200 font-greatvibes">
                     ElevateU
-                </a>
+                </Link>
             </div>
 
 
@@ -66,9 +66,9 @@ const NavBar = () => {
                                         title={user.displayName}
                                     />
                                 </div>
-                               ) : (
+                            ) : (
                                 <FaRegUserCircle className="text-yellow-400 hover:text-yellow-200 text-3xl md:text-4xl cursor-pointer" />
-                               )
+                            )
                         }
 
                     </div>
