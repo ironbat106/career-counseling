@@ -11,7 +11,6 @@ import PrivateRoute from "./PrivateRoute";
 import ForgetPassword from "../components/ForgetPassword";
 
 
-
 const router = createBrowserRouter([
     {
         path: "/",
@@ -49,7 +48,11 @@ const router = createBrowserRouter([
     },
     {
         path: "/about",
-        element: <About></About>
+        element: (
+            <PrivateRoute>
+                <About></About>
+            </PrivateRoute>
+        )
     },
     {
         path: "/services/:id",
