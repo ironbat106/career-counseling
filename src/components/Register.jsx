@@ -5,17 +5,21 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import TestToast from "./TestToast";
 import { FaGoogle } from "react-icons/fa";
+import { IoEyeSharp } from "react-icons/io5";
+import { IoEyeOffSharp } from "react-icons/io5";
 
 
 const Register = () => {
 
     useEffect(() => {
         document.title = "Register | ElevateU";
+        window.scrollTo(0, 0);
     }, []);
 
     const { createNewUser, setUser, updateUserProfile, googleSignIn } = useContext(AuthContext);
     const navigate = useNavigate();
     const [error, setError] = useState({});
+    const [showPassword, setShowPassword] = useState(false);
     const [password, setPassword] = useState("");
 
     const handlePasswordChange = (e) => {
@@ -145,7 +149,7 @@ const Register = () => {
                         <input name="email" type="email" placeholder="email" className="input input-bordered" required />
                     </div>
 
-                    <div className="form-control">
+                    <div className="form-control relative">
 
                         <label className="label">
                             <span className="label-text">Password</span>
@@ -153,13 +157,21 @@ const Register = () => {
 
                         <input
                             name="password"
-                            type="password"
+                            type={showPassword ? 'text' : 'password'}
                             placeholder="password"
                             className="input input-bordered"
                             value={password}
                             onChange={handlePasswordChange}
                             required
                         />
+                        <button
+                            onClick={() => setShowPassword(!showPassword)}
+                            className="btn btn-xs absolute right-2 top-12">
+                            {
+                                showPassword ?  <IoEyeSharp /> : <IoEyeOffSharp />
+                            }
+                        </button>
+
                         {
                             error.password && (
                                 <div className="text-xs text-yellow-300 mt-1">

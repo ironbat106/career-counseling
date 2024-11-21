@@ -1,4 +1,16 @@
+import Aos from "aos";
+import { useEffect } from "react";
+import "aos/dist/aos.css";
+
 const CareerRoadmap = () => {
+
+    useEffect(() => {
+        Aos.init({ duration: 1000 });
+    }, []);
+
+    useEffect(() => {
+        Aos.refresh();
+    }, []);
 
     const steps = [
         {
@@ -46,6 +58,7 @@ const CareerRoadmap = () => {
 
                         <div
                             key={step.id}
+                            data-aos="fade-down"
                             className="flex flex-col items-center text-center group bg-gradient-to-b from-gray-800 to-gray-900 p-6 rounded-lg shadow-md hover:shadow-xl hover:scale-105 transform transition duration-300 ease-in-out"
                         >
 

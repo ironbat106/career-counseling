@@ -3,8 +3,9 @@ import Footer from './Footer';
 import { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../provider/AuthProvider';
 import { updateProfile } from 'firebase/auth';
-
 import backgroundImage from '../assets/usinglaptop.jpg';
+import { FaArrowLeft } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 const MyProfile = () => {
 
@@ -42,15 +43,24 @@ const MyProfile = () => {
             <div
                 className="flex flex-col items-center justify-center min-h-screen py-12 bg-cover bg-center"
                 style={{ backgroundImage: `url(${backgroundImage})` }}  // Using the imported image
-            ></div>
+            >
 
-            <div className="flex flex-col items-center justify-center min-h-screen py-12">
 
-                <div className="group bg-gradient-to-b from-gray-800 to-gray-900 p-8 rounded-lg shadow-lg hover:shadow-2xl hover:scale-105 transform transition-transform duration-300 ease-in-out w-full max-w-md mx-auto">
+                <div className="group bg-gray-800 bg-opacity-70 p-8 rounded-lg shadow-lg hover:shadow-2xl hover:scale-105 transform transition-transform duration-300 ease-in-out w-full max-w-md mx-auto">
 
-                    <h2 className="text-center font-greatvibes text-yellow-400 text-5xl mb-6 transform hover:scale-105 transition duration-300">
-                        My Profile
-                    </h2>
+                    <div className='flex items-center mb-10 gap-12'>
+                        
+                        <Link to="/" className="btn btn-warning mb-10 rounded-full">
+                            <FaArrowLeft />
+                        </Link>
+
+                        <h2 className="text-center font-greatvibes text-yellow-400 text-5xl mb-6 transform hover:scale-105 transition duration-300">
+                            My Profile
+                        </h2>
+
+                    </div>
+
+
 
                     {user && (
                         <>
@@ -59,10 +69,12 @@ const MyProfile = () => {
                                 alt={user?.displayName || "User"}
                                 className="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-yellow-400 shadow-xl group-hover:scale-105 transform transition-transform duration-300"
                             />
+
                             <h3 className="text-center text-xl font-semibold">
                                 {user?.displayName || "Anonymous User"}
                             </h3>
-                            <p className="text-center text-gray-600">
+
+                            <p className="text-center text-gray-300">
                                 {user.email}
                             </p>
 

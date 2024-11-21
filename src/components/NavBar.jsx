@@ -86,7 +86,14 @@ const NavBar = () => {
 
 
                     <li>
-                        <button className="btn btn-warning hover:bg-yellow-300 font-mono">
+                        <button
+                            onClick={() => {
+                                const servicesSection = document.getElementById("services");
+                                if (servicesSection) {
+                                    servicesSection.scrollIntoView({ behavior: "smooth" });
+                                }
+                            }}
+                        className="btn btn-warning hover:bg-yellow-300 font-mono">
                             <HiAnnotation />
                             Book an Appointment
                         </button>

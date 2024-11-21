@@ -1,11 +1,29 @@
+import Aos from "aos";
+import { useEffect } from "react";
+import "aos/dist/aos.css";
+
 const FeaturedVideo = () => {
+
+    useEffect(() => {
+        Aos.init({ duration: 1000 });
+    }, []);
+
+    useEffect(() => {
+        Aos.refresh();
+    }, []);
+
     return (
         <div className="w-11/12 mx-auto py-12">
+
             <h2 className="text-3xl sm:text-6xl font-greatvibes font-bold text-center text-yellow-400 mb-10">
                 Featured Video
             </h2>
+
             <div className="flex justify-center items-center">
-                <div className="group w-full max-w-3xl bg-gradient-to-b from-gray-800 to-gray-900 p-6 rounded-lg shadow-lg hover:shadow-2xl hover:scale-105 transform transition-transform duration-300 ease-in-out">
+
+                <div 
+                data-aos="flip-down"
+                className="group w-full max-w-3xl bg-gradient-to-b from-gray-800 to-gray-900 p-6 rounded-lg shadow-lg hover:shadow-2xl hover:scale-105 transform transition-transform duration-300 ease-in-out">
                     <iframe
                         width="100%"
                         height="415"

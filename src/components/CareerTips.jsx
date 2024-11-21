@@ -1,4 +1,16 @@
+import Aos from "aos";
+import { useEffect } from "react";
+import "aos/dist/aos.css";
+
 const CareerTips = () => {
+
+    useEffect(() => {
+        Aos.init({ duration: 1000 });
+    }, []);
+
+    useEffect(() => {
+        Aos.refresh();
+    }, []);
 
     const tips = [
         { id: 1, tip: "Keep your resume updated regularly.", icon: "📄" },
@@ -20,6 +32,7 @@ const CareerTips = () => {
                         tips.map((tip) => (
                             <div
                                 key={tip.id}
+                                data-aos="fade-up-right"
                                 className="group bg-gradient-to-b from-gray-800 to-gray-900 p-6 rounded-lg shadow-md hover:shadow-xl hover:scale-105 transform transition duration-300 ease-in-out"
                             >
                                 <div className="flex items-center mb-4">
